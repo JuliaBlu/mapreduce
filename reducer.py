@@ -54,9 +54,10 @@ for line in sys.stdin:
     # the float function transforms the value
     # to a float data type (like decimal)
     sum_of_values += 1
+    count_of_values += 1
     # the previous key for the next iteration is the current key of the this iteration 
     previous_key = key
 
 # write the last result to stdout
 if sum_of_values > 114:
-sys.stdout.write("{0}\t{1}\n".format(previous_key, sum_of_values))
+sys.stdout.write("{0}\t{1}\n".format(previous_key, sum_of_values/count_of_values))
